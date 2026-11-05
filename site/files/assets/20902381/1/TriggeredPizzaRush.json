@@ -1,0 +1,390 @@
+{
+	"maxOrders": 4,
+
+	"noNewOrderWeight": 0,
+	"useWaves": true,
+	"hypeWaveTime": 80,
+
+	"recipes": [{
+			"type": "margherita",
+			"title": "Margherita",
+			"ingredients": ["tomato", "cheese"],
+            "cookingTime": 10,
+			"appearanceWeight": 20,
+			"short": {
+				"min": 55,
+				"max": 55
+			},
+			"medium": {
+				"min": 75,
+				"max": 75
+			},
+			"long": {
+				"min": 110,
+				"max": 110
+			},
+
+			"basePrice": 15,
+			"tipAmount": 2
+		},
+		{
+			"type": "hawaiian",
+			"title": "Hawaiian",
+			"ingredients": ["cheese", "pineapple", "ham"],
+            "cookingTime": 15,
+			"appearanceWeight": 10,
+			"short": {
+				"min": 60,
+				"max": 60
+			},
+			"medium": {
+				"min": 80,
+				"max": 80
+			},
+			"long": {
+				"min": 115,
+				"max": 115
+			},
+			"basePrice": 35,
+			"tipAmount": 2
+		},
+        {
+			"type": "flatbread",
+			"title": "Flatbread",
+			"ingredients": [ ],
+            "cookingTime": 5,
+			"appearanceWeight": 20,
+			"short": {
+				"min": 30,
+				"max": 30
+			},
+			"medium": {
+				"min": 50,
+				"max": 50
+			},
+			"long": {
+				"min": 85,
+				"max": 85
+			},
+			"basePrice": 5,
+			"tipAmount": 2
+		},
+         {
+			"type": "cheesyBread",
+			"title": "Cheesey Bread",
+			"ingredients": [ "cheese"],
+            "cookingTime": 7,
+			"appearanceWeight": 25,
+			"short": {
+				"min": 45,
+				"max": 45
+			},
+			"medium": {
+				"min": 65,
+				"max": 65
+			},
+			"long": {
+				"min": 95,
+				"max": 95
+			},
+			"basePrice": 10,
+			"tipAmount": 2
+		},
+        {
+			"type": "chickenFeast",
+			"title": "Chicken Feast",
+			"ingredients": ["cheese","chicken"],
+			"appearanceWeight": 10,
+            "cookingTime": 5,
+			"short": {
+				"min": 50,
+				"max": 50
+			},
+			"medium": {
+				"min": 65,
+				"max": 65
+			},
+			"long": {
+				"min": 95,
+				"max": 95
+			},
+			"basePrice": 40,
+			"tipAmount": 2
+		}
+	],
+
+	"parties": [{
+			"size": 1,
+			"minTimeToNextRoll": 20,
+			"maxTimeToNextRoll": 35
+		},
+
+		{
+			"size": 2,
+			"minTimeToNextRoll": 15,
+			"maxTimeToNextRoll": 30
+		},
+
+		{
+			"size": 3,
+			"minTimeToNextRoll": 10,
+			"maxTimeToNextRoll": 25
+		},
+
+		{
+			"size": 4,
+			"minTimeToNextRoll": 5,
+			"maxTimeToNextRoll": 20
+		},
+
+		{
+			"size": -1,
+			"minTimeToNextRoll": 20,
+			"maxTimeToNextRoll": 40
+		}
+	],
+
+	"hypeWaves": [
+		{
+			"time": 0,
+			"type": "maxOrders",
+			"data": {
+				"value": 2
+			}
+		},
+		{
+			"time": 2,
+			"type": "pizza",
+			"data": {
+				"type": "flatbread",
+                "duration": "long"
+			}
+		},
+        {
+			"time": 7,
+			"type": "pizza",
+			"data": {
+				"type": "cheesyBread",
+                "duration": "long"
+			}
+		},
+		{
+			"time": 15,
+			"type": "pizza",
+			"data": {
+				"type": "chickenFeast",
+				"duration": "long"
+			}
+		},
+		{
+			"time": 35,
+			"type": "pizza",
+			"data": {
+				"type": "margherita",
+				"duration": "medium"
+			}
+		},
+		{
+			"time": 65,
+			"type": "pizza",
+			"data": {
+				"type": "hawaiian",
+                "duration": "long"
+			}
+		},
+        {
+			"time": 75,
+			"type": "pizza",
+			"data": {
+				"type": "chickenFeast",
+                "duration": "long"
+			}
+		}
+	],
+        
+    "pizzaRushWave": [
+		{
+			"time": 10,
+			"type": "maxOrders",
+			"data": {
+				"value": 3
+			}
+		},
+		{
+			"time": 10,
+			"type": "pizza",
+			"data": {
+				"type": "margherita",
+                "duration": "medium"
+			}
+		},
+              {
+			"time": 15,
+			"type": "pizza",
+			"data": {
+				"type": "flatbread",
+                "duration": "medium"
+			}
+		},
+		{
+			"time": 20,
+			"type": "pizza",
+			"data": {
+				"type": "chickenFeast",
+                "duration": "medium"
+			}
+		},
+		{
+			"time": 30,
+			"type": "pizza",
+			"data": {
+				"type": "cheesyBread",
+                "duration": "medium"
+			}
+		},
+		{
+			"time": 30,
+			"type": "pizza",
+			"data": {
+				"type": "hawaiian",
+                "duration": "medium"
+			}
+		},
+         {
+			"time": 30,
+			"type": "maxOrders",
+			"data": {
+				"value": 4
+			}
+		},
+		{
+			"time": 40,
+			"type": "pizza",
+			"data": {
+				"type": "margherita",
+                "duration": "medium"
+			}
+		},
+		{
+			"time": 45,
+			"type": "pizza",
+			"data": {
+				"type": "hawaiian",
+                "duration": "medium"
+			}
+		},
+		{
+			"time": 50,
+			"type": "pizza",
+			"data": {
+				"type": "cheesyBread",
+                "duration": "short"
+			}
+		},
+		{
+			"time": 55,
+			"type": "pizza",
+			"data": {
+				"type": "margherita",
+                "duration": "short"
+			}
+		},
+        {
+			"time": 60,
+			"type": "trigger",
+			"data": {
+                "type": "timeRemaining",
+				"value": ["Time remaining...", "1 minute"]
+			}
+		},
+        {
+			"time": 60,
+			"type": "pizza",
+			"data": {
+				"type": "random",
+                "duration": "short"
+			}
+		},
+        {
+			"time": 65,
+			"type": "pizza",
+			"data": {
+				"type": "random",
+                "duration": "short"
+			}
+		},
+        {
+			"time": 70,
+			"type": "pizza",
+			"data": {
+				"type": "random",
+                "duration": "short"
+			}
+		},
+         {
+			"time": 70,
+			"type": "pizza",
+			"data": {
+				"type": "random",
+                "duration": "short"
+			}
+		},
+        {
+			"time": 75,
+			"type": "pizza",
+			"data": {
+				"type": "random",
+                "duration": "short"
+			}
+		},
+        {
+			"time": 80,
+			"type": "pizza",
+			"data": {
+				"type": "random",
+                "duration": "medium"
+			}
+		},
+        {
+			"time": 85,
+			"type": "pizza",
+			"data": {
+				"type": "random",
+                "duration": "short"
+			}
+		},
+        {
+			"time": 90,
+			"type": "pizza",
+			"data": {
+				"type": "random",
+                "duration": "medium"
+			}
+		},
+        {
+			"time": 95,
+			"type": "pizza",
+			"data": {
+				"type": "random",
+                "duration": "short"
+			}
+		},
+        {
+			"time": 100,
+			"type": "pizza",
+			"data": {
+				"type": "random",
+                "duration": "short"
+			}
+		},
+        {
+			"time": 110,
+			"type": "pizza",
+			"data": {
+				"type": "random",
+                "duration": "short"
+			}
+		}
+        
+	]
+}

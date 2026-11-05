@@ -1,0 +1,8 @@
+# Preserve the archived client byte-for-byte and keep it out of GitHub's
+# language statistics.
+game/** -text -diff linguist-vendored
+site/** -text -diff linguist-vendored
+data/** -text -diff linguist-vendored
+
+# Generated at build time; committed here as part of the runnable archive.
+server/nakama/modules/index.js linguist-generated

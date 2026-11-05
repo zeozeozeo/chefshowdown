@@ -1,0 +1,513 @@
+{
+	"maxOrders": 4,
+
+	"noNewOrderWeight": 0,
+	"useWaves": true,
+	"totalWaveTime": 330,
+
+	"recipes": [{
+			"type": "margherita",
+			"title": "Margherita",
+			"ingredients": ["tomato", "cheese"],
+			"appearanceWeight": 20,
+			"short": {
+				"min": 55,
+				"max": 55
+			},
+			"medium": {
+				"min": 75,
+				"max": 75
+			},
+			"long": {
+				"min": 105,
+				"max": 105
+			},
+
+			"basePrice": 15,
+			"tipAmount": 2
+		},
+		{
+			"type": "hawaiian",
+			"title": "Hawaiian",
+			"ingredients": ["cheese", "pineapple", "ham"],
+			"appearanceWeight": 10,
+			"short": {
+				"min": 65,
+				"max": 65
+			},
+			"medium": {
+				"min": 85,
+				"max": 85
+			},
+			"long": {
+				"min": 115,
+				"max": 115
+			},
+			"basePrice": 35,
+			"tipAmount": 2
+		},
+        {
+			"type": "flatbread",
+			"title": "Flatbead",
+			"ingredients": [ ],
+			"appearanceWeight": 20,
+			"short": {
+				"min": 25,
+				"max": 25
+			},
+			"medium": {
+				"min": 45,
+				"max": 45
+			},
+			"long": {
+				"min": 75,
+				"max": 75
+			},
+			"basePrice": 5,
+			"tipAmount": 2
+		},
+         {
+			"type": "bianca",
+			"title": "Bianca",
+			"ingredients": [ "cheese"],
+			"appearanceWeight": 25,
+			"short": {
+				"min": 30,
+				"max": 30
+			},
+			"medium": {
+				"min": 50,
+				"max": 50
+			},
+			"long": {
+				"min": 80,
+				"max": 80
+			},
+			"basePrice": 10,
+			"tipAmount": 2
+		},
+        {
+			"type": "sausageFeast",
+			"title": "Sausage Feast",
+			"ingredients": [ "cheese","pepperoni"],
+			"appearanceWeight": 25,
+			"short": {
+				"min": 45,
+				"max": 45
+			},
+			"medium": {
+				"min": 65,
+				"max": 65
+			},
+			"long": {
+				"min": 95,
+				"max": 95
+			},
+			"basePrice": 40,
+			"tipAmount": 2
+		}
+	],
+
+	"parties": [{
+			"size": 1,
+			"minTimeToNextRoll": 20,
+			"maxTimeToNextRoll": 35
+		},
+
+		{
+			"size": 2,
+			"minTimeToNextRoll": 15,
+			"maxTimeToNextRoll": 30
+		},
+
+		{
+			"size": 3,
+			"minTimeToNextRoll": 10,
+			"maxTimeToNextRoll": 25
+		},
+
+		{
+			"size": 4,
+			"minTimeToNextRoll": 5,
+			"maxTimeToNextRoll": 20
+		},
+
+		{
+			"size": -1,
+			"minTimeToNextRoll": 20,
+			"maxTimeToNextRoll": 40
+		}
+	],
+
+	"waves": [{
+			"time": 0,
+			"type": "phaseChange",
+			"data": {
+				"type": "preparation"
+			}
+		},
+		{
+			"time": 0,
+			"type": "maxOrders",
+			"data": {
+				"value": 2
+			}
+		},
+		{
+			"time": 2,
+			"type": "pizza",
+			"data": {
+				"type": "margherita",
+                "duration": "long"
+			}
+		},
+		{
+			"time": 30,
+			"type": "pizza",
+			"data": {
+				"type": "sausageFeast",
+				"duration": "long"
+			}
+		},
+		{
+			"time": 65,
+			"type": "pizza",
+			"data": {
+				"type": "margherita",
+				"duration": "long"
+			}
+		},
+		{
+			"time": 80,
+			"type": "pizza",
+			"data": {
+				"type": "hawaiian",
+                "duration": "long"
+			}
+		},
+        {
+			"time": 95,
+			"type": "pizza",
+			"data": {
+				"type": "bianca",
+                "duration": "long"
+			}
+		},
+		{
+			"time": 120,
+			"type": "maxOrders",
+			"data": {
+				"value": 3
+			}
+		},
+		{
+			"time": 120,
+			"type": "pizza",
+			"data": {
+				"type": "margherita",
+                "duration": "medium"
+			}
+		},
+              {
+			"time": 125,
+			"type": "pizza",
+			"data": {
+				"type": "margherita",
+                "duration": "medium"
+			}
+		},
+		{
+			"time": 130,
+			"type": "pizza",
+			"data": {
+				"type": "sausageFeast",
+                "duration": "medium"
+			}
+		},
+		{
+			"time": 140,
+			"type": "pizza",
+			"data": {
+				"type": "bianca",
+                "duration": "medium"
+			}
+		},
+		{
+			"time": 140,
+			"type": "pizza",
+			"data": {
+				"type": "hawaiian",
+                "duration": "medium"
+			}
+		},
+        {
+			"time": 150,
+			"type": "maxOrders",
+			"data": {
+				"value": 4
+			}
+		},
+		{
+			"time": 150,
+			"type": "pizza",
+			"data": {
+				"type": "margherita",
+                "duration": "medium"
+			}
+		},
+		{
+			"time": 155,
+			"type": "pizza",
+			"data": {
+				"type": "hawaiian",
+                "duration": "medium"
+			}
+		},
+		{
+			"time": 160,
+			"type": "pizza",
+			"data": {
+				"type": "bianca",
+                "duration": "short"
+			}
+		},
+		{
+			"time": 165,
+			"type": "pizza",
+			"data": {
+				"type": "margherita",
+                "duration": "short"
+			}
+		},
+		{
+			"time": 170,
+			"type": "pizza",
+			"data": {
+				"type": "sausageFeast",
+                "duration": "short"
+			}
+		},
+		{
+			"time": 175,
+			"type": "pizza",
+			"data": {
+				"type": "hawaiian",
+                "duration": "short"
+			}
+		},
+		{
+			"time": 180,
+			"type": "pizza",
+			"data": {
+				"type": "margherita",
+                "duration": "short"
+			}
+		},
+		{
+			"time": 185,
+			"type": "pizza",
+			"data": {
+				"type": "margherita",
+                "duration": "short"
+			}
+		},
+		{
+			"time": 190,
+			"type": "pizza",
+			"data": {
+				"type": "random",
+                "duration": "short"
+			}
+		},
+		{
+			"time": 195,
+			"type": "pizza",
+			"data": {
+				"type": "random",
+                "duration": "short"
+			}
+		},
+		{
+			"time": 200,
+			"type": "pizza",
+			"data": {
+				"type": "margherita",
+                "duration": "short"
+			}
+		},
+		{
+			"time": 205,
+			"type": "pizza",
+			"data": {
+				"type": "margherita",
+                "duration": "short"
+			}
+		},
+		{
+			"time": 210,
+			"type": "pizza",
+			"data": {
+				"type": "bianca",
+                "duration": "short"
+			}
+		},
+		{
+			"time": 215,
+			"type": "pizza",
+			"data": {
+				"type": "hawaiian",
+                "duration": "short"
+			}
+		},
+		{
+			"time": 220,
+			"type": "pizza",
+			"data": {
+				"type": "random",
+                "duration": "short"
+			}
+		},
+		{
+			"time": 225,
+			"type": "pizza",
+			"data": {
+				"type": "bianca",
+                "duration": "short"
+			}
+		},
+		{
+			"time": 230,
+			"type": "pizza",
+			"data": {
+				"type": "margherita",
+                "duration": "short"
+			}
+		},
+		{
+			"time": 235,
+			"type": "pizza",
+			"data": {
+				"type": "bianca",
+                "duration": "short"
+			}
+		},
+		{
+			"time": 240,
+			"type": "pizza",
+			"data": {
+				"type": "random",
+                "duration": "short"
+			}
+		},
+		{
+			"time": 245,
+			"type": "pizza",
+			"data": {
+				"type": "sausageFeast",
+                "duration": "short"
+			}
+		},
+		{
+			"time": 250,
+			"type": "pizza",
+			"data": {
+				"type": "hawaiian",
+                "duration": "short"
+			}
+		},
+		{
+			"time": 255,
+			"type": "pizza",
+			"data": {
+				"type": "random",
+                "duration": "short"
+			}
+		},
+		{
+			"time": 260,
+			"type": "pizza",
+			"data": {
+				"type": "random",
+                "duration": "short"
+			}
+		},
+        {
+			"time": 265,
+			"type": "pizza",
+			"data": {
+				"type": "random",
+                "duration": "short"
+			}
+		},    
+        {
+			"time": 270,
+			"type": "pizza",
+			"data": {
+				"type": "random",
+                "duration": "short"
+			}
+		},
+        {
+			"time": 275,
+			"type": "pizza",
+			"data": {
+				"type": "random",
+                "duration": "short"
+			}
+		},
+        {
+			"time": 280,
+			"type": "pizza",
+			"data": {
+				"type": "random",
+                "duration": "short"
+			}
+		},
+        {
+			"time": 285,
+			"type": "pizza",
+			"data": {
+				"type": "random",
+                "duration": "short"
+			}
+		},
+        {
+			"time": 290,
+			"type": "pizza",
+			"data": {
+				"type": "random",
+                "duration": "short"
+			}
+		},
+        {
+			"time": 295,
+			"type": "pizza",
+			"data": {
+				"type": "random",
+                "duration": "short"
+			}
+		},
+        {
+			"time": 300,
+			"type": "pizza",
+			"data": {
+				"type": "random",
+                "duration": "short"
+			}
+		},
+		{
+			"time": 300,
+			"type": "phaseChange",
+			"data": {
+				"type": "reward"
+			}
+		},
+        {
+			"time": 300,
+			"type": "maxOrders",
+			"data": {
+				"value": 0
+			}
+		}
+	]
+}

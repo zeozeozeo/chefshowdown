@@ -1,0 +1,23 @@
+{
+  "environment": "production",
+  "gameVersion": "4.2.7",
+  "releaseName": "chef:production:4.2.7:ec7ccd5461",
+  "analytics": {
+    "sendEnabled": true,
+    "logEnabled": false,
+    "activeSessionTimeoutMS": 300000,
+    "batchingSettings": {
+      "enabled": true,
+      "flushIntervalMS": 2000,
+      "maxBatchSize": 10
+    }
+  },
+  "mojiservices": {
+    "gameName": "discord-chef-prod",
+    "baseURL": "https://v3-dot-mojiservices-prod.appspot.com"
+  },
+  "buildTimestamp": 1751647491486,
+  "discordClientId": "1037680572660727838",
+  "nakamaHost": "discord-chef-prod.us-east1.nakamacloud.io",
+  "sentryDsn": "https://d20c735d967b42fd945a462fde800aca@o125692.ingest.sentry.io/1773156"
+}

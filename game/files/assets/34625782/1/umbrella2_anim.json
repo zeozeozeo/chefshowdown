@@ -1,0 +1,1 @@
+{"model":{"version":3,"nodes":[{"name":"RootNode","position":[0,0,0],"rotation":[0,0,0],"scale":[0.01,0.01,0.01],"scaleCompensation":false},{"name":"umbrella2","position":[-1,0,0],"rotation":[0.455194,2.02586,-0.750443],"scale":[1,1,1],"scaleCompensation":false}],"parents":[-1,0],"skins":[],"morphs":[],"vertices":[],"meshes":[],"meshInstances":[]}}

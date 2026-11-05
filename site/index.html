@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>Chef Showdown</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    #chef-boot { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 14px; background: #16130f; color: #fff; font: 600 16px/1.4 Helvetica, Arial, sans-serif; z-index: 99999; }
+    #chef-boot.hidden { display: none; }
+    #chef-boot .bar { width: min(340px, 70vw); height: 8px; background: #332a20; border-radius: 99px; overflow: hidden; }
+    #chef-boot .bar > i { display: block; height: 100%; width: 0; background: #f2b134; transition: width .2s ease; }
+    #chef-boot small { opacity: .65; font-weight: 400; }
+  </style>
+</head>
+<body>
+  <div id="chef-boot">
+    <div>Warming up the kitchen…</div>
+    <div class="bar"><i id="chef-boot-progress"></i></div>
+    <small id="chef-boot-status">Loading game assets</small>
+  </div>
+  <script src="/chef-config.js"></script>
+  <script src="chef-platform.js"></script>
+  <script nonce="chef">
+    RTCPeerConnection = null;
+    WebTransport = null;
+  </script>
+  <script src="files/assets/26779643/1/bootstrap.build.js"></script>
+  <script src="playcanvas-stable.min.js"></script>
+  <script src="files/assets/124639000/1/engine-patches.js"></script>
+  <script src="__settings__.js"></script>
+  <script src="__start__.js"></script>
+  <script src="__loading__.js"></script>
+</body>
+</html>

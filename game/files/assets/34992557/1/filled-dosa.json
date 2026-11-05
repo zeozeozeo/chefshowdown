@@ -1,0 +1,1 @@
+{"animation":{"version":4,"name":"Take 001","duration":5,"nodes":[{"name":"filled_dosa","defaults":{"p":[9.7739,15.8727,3.41444],"r":[-10,0,0],"s":[1,1,1]},"keys":[{"t":0}]},{"name":"Dosa_Plate","defaults":{"p":[0,4.69469,-0.609383],"r":[0,-0,0],"s":[1,1,1]},"keys":[{"t":0}]}]}}

@@ -1,0 +1,42 @@
+{
+    "INACTIVE_anim_put_down": [
+        {"time": 0.7, "event": "putInOven"}
+        
+    ],
+
+    "INACTIVE_anim_put_in_oven": [
+        {"time": 0.4, "event": "putInOven"}
+        
+    ],
+        
+    "INACTIVE_anim_pull_out_oven": [
+        {"time": 0.2, "event": "takeOutOven"}
+        
+    ],
+
+    "INACTIVE_anim_swop_pizza": [
+        {"time": 0.2, "event": "putInOven"},
+        {"time": 0.2, "event": "takeOutOven"}        
+    ],          
+        
+    "serve_food": [
+        {"time": 0.1, "event": "servePizza"}
+    ],
+      
+    "produce_burger": [
+        {"time": 0.0001, "event": "hideKnife"},
+        {"time": 0.0001, "event": "createPizza"}
+    ],
+
+   "INACTIVE_anim_chop_single_outof": [
+       {"time": 0.2, "event": "hideKnife"}    
+   ],
+       
+    "put_in_bin": [
+       {"time": 0.5, "event": "hideKnife"}    
+   ],
+   
+    "put_down_object": [
+       {"time": 0.15, "event": "hideKnife"}    
+   ]
+}

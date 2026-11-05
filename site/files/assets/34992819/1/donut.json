@@ -1,0 +1,1 @@
+{"animation":{"version":4,"name":"Take 001","duration":5,"nodes":[{"name":"medu_vada","defaults":{"p":[17.7035,2.02935,-2.12455],"r":[0,44,0],"s":[1,1,1]},"keys":[{"t":0}]},{"name":"medu_plate","defaults":{"p":[-1.33998,-8.34707,0.364491],"r":[0,-0,0],"s":[0.846375,0.925,0.925]},"keys":[{"t":0}]}]}}

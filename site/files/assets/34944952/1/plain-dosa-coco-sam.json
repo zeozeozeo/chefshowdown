@@ -1,0 +1,1 @@
+{"animation":{"version":4,"name":"Take 001","duration":5,"nodes":[{"name":"plain-dosa","defaults":{"p":[0,0,0],"r":[0,-0,0],"s":[1,1,1]},"keys":[{"t":0}]},{"name":"sambar","defaults":{"p":[-47,-11.4406,70.2489],"r":[0,0,0],"s":[1,1,1]},"keys":[{"t":0}]},{"name":"coconut_chutney","defaults":{"p":[-47,-11.4406,70.2489],"r":[0,0,0],"s":[1,1,1]},"keys":[{"t":0}]}]}}

@@ -1,0 +1,22 @@
+# Preservation notice
+
+This repository is an unofficial preservation archive for **Chef Showdown**, a
+discontinued Discord Activity originally developed by Mojiworks.
+
+The files under `game/`, `data/` and `site/` are the original downloaded game
+build, configuration extracted from that build, and a patched copy of the same
+build. They are included solely so that the game remains available after the
+original hosted service and CDN disappear. They are not authored by, and are not
+licensed by, the maintainers of this repository.
+
+All game code, artwork, audio, models, fonts, trademarks and other assets remain
+the property of Mojiworks and their respective rights holders. No license,
+ownership or permission to redistribute these assets for commercial purposes is
+granted by this repository. Do not sell or monetize the archived assets.
+
+The downloader, patcher, web application, server implementation, tests and
+documentation in this repository are original project work. No license has been
+declared for that code.
+
+If you are a rights holder and want this archive changed or removed, please open
+an issue in the repository where this notice is hosted.

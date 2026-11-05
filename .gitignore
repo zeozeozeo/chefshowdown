@@ -1,0 +1,24 @@
+node_modules/
+
+# Local runtime data
+uploads/*
+!uploads/.gitkeep
+*.log
+**/.cookie
+
+# Secrets and local overrides
+.env
+.env.*
+!.env.example
+
+# Test artifacts
+tests/*.png
+coverage/
+.nyc_output/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

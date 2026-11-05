@@ -1,0 +1,20 @@
+name: chef-private
+logger:
+  level: INFO
+  stdout: true
+database:
+  address:
+    - "postgres:localdb@postgres:5432/nakama"
+runtime:
+  path: /nakama/data/modules
+  js_entrypoint: index.js
+  http_key: chef_http_key
+socket:
+  server_key: defaultkey
+  max_message_size_bytes: 1048576
+  max_request_size_bytes: 1048576
+session:
+  token_expiry_sec: 7200
+console:
+  username: admin
+  password: password

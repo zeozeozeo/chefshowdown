@@ -1,0 +1,59 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: nakama
+      POSTGRES_PASSWORD: localdb
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d nakama"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+    restart: unless-stopped
+
+  nakama:
+    image: heroiclabs/nakama:3.29.0
+    # Docker's embedded resolver is required for the `postgres` service name.
+    # On hosts with Tailscale-managed resolv.conf, Go can otherwise skip it and
+    # try the unreachable IPv6 Tailscale nameserver.
+    dns:
+      - 127.0.0.11
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./server/nakama:/nakama/data
+    entrypoint:
+      - "/bin/sh"
+      - "-ec"
+      - |
+        /nakama/nakama migrate up --database.address postgres:localdb@postgres:5432/nakama
+        exec /nakama/nakama --config /nakama/data/nakama.yml
+    ports:
+      - "7350:7350"
+    restart: unless-stopped
+
+  web:
+    build:
+      context: .
+      dockerfile: server/web/Dockerfile
+    depends_on:
+      - nakama
+    environment:
+      PORT: "8080"
+      NAKAMA_URL: "http://nakama:7350"
+      NAKAMA_CLIENT_KEY: "defaultkey"
+      NAKAMA_HTTP_KEY: "chef_http_key"
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./uploads:/app/uploads
+      - ./site:/app/site:ro
+      - ./web:/app/web:ro
+      - ./server/web:/app/server/web:ro
+    restart: unless-stopped
+
+volumes:
+  pgdata:

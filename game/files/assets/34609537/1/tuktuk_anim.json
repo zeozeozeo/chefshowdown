@@ -1,0 +1,1 @@
+{"model":{"version":3,"nodes":[{"name":"RootNode","position":[0,0,0],"rotation":[0,0,0],"scale":[0.01,0.01,0.01],"scaleCompensation":false},{"name":"TukTuk","position":[0,9.81385,-5.96046e-08],"rotation":[-0.17951,-1.26654,8.06761],"scale":[0.33229,0.33229,0.33229],"scaleCompensation":false}],"parents":[-1,0],"skins":[],"morphs":[],"vertices":[],"meshes":[],"meshInstances":[]}}

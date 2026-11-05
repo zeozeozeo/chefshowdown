@@ -1,0 +1,8 @@
+node_modules
+game
+data
+tests
+docs
+.git
+uploads
+*.log

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chef Showdown</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">
+      <span class="brand-name">Chef Showdown</span>
+      <span class="brand-sub">private kitchen</span>
+    </a>
+    <div id="profile-chip" class="profile-chip" hidden>
+      <img id="profile-chip-avatar" alt="">
+      <span id="profile-chip-name"></span>
+    </div>
+  </header>
+
+  <main id="app">
+    <section id="view-home" class="view">
+      <div class="page-head">
+        <h1>Connect</h1>
+        <p class="hint">Join a room or create a kitchen.</p>
+      </div>
+
+      <div class="home-grid">
+        <section class="panel" id="profile-card">
+          <div class="panel-head">
+            <h2>Chef</h2>
+            <button class="text-button" id="new-identity" title="New identity for this tab">new identity</button>
+          </div>
+          <p class="hint">Per-tab profile. Each tab can be a different player.</p>
+
+          <div class="avatar-row">
+            <img id="avatar-preview" alt="avatar preview">
+            <label class="upload-link" for="avatar-input">
+              Upload avatar
+              <input id="avatar-input" type="file" accept="image/png,image/jpeg,image/webp">
+            </label>
+          </div>
+
+          <div class="fields">
+            <label>Name
+              <input id="name-input" maxlength="18" placeholder="Chef name" autocomplete="off">
+            </label>
+            <label>Color
+              <input id="color-input" type="color" value="#f2b134">
+            </label>
+            <button class="btn" id="save-profile">Save chef</button>
+          </div>
+        </section>
+
+        <section class="panel" id="join-card">
+          <h2>Join a room</h2>
+          <div class="join-row">
+            <input id="join-code" maxlength="8" placeholder="ROOM CODE" autocomplete="off" aria-label="Room code">
+            <button class="btn primary" id="join-button">Join</button>
+          </div>
+
+          <hr>
+
+          <h2>Create a room</h2>
+          <div class="create-row">
+            <label>Mode
+              <select id="create-mode">
+                <option value="coop" selected>Co-op</option>
+                <option value="classic">Classic</option>
+                <option value="duel">Duel</option>
+                <option value="pve">Score Attack</option>
+              </select>
+            </label>
+            <label>Stage
+              <select id="create-stage"></select>
+            </label>
+            <label>Max players
+              <select id="create-max">
+                <option>2</option><option selected>4</option><option>6</option><option>8</option>
+              </select>
+            </label>
+          </div>
+          <button class="btn primary wide" id="create-button">Create room</button>
+          <p class="hint">The in-game lobby lets everyone pick a mode and map.</p>
+        </section>
+      </div>
+    </section>
+
+    <section id="view-room" class="view" hidden>
+      <div class="room-head">
+        <div>
+          <p class="label">Room code</p>
+          <div class="room-code" id="room-code">----</div>
+          <p class="hint">Share this code or the invite link.</p>
+        </div>
+        <div class="room-actions">
+          <button class="btn ghost" id="copy-link">Copy invite link</button>
+          <button class="btn ghost" id="leave-room">Leave</button>
+        </div>
+      </div>
+
+      <div class="room-grid">
+        <section class="panel">
+          <div class="panel-head">
+            <h2>Players</h2>
+            <span class="status" id="room-status">waiting</span>
+          </div>
+          <ul class="player-list" id="player-list"></ul>
+          <button class="btn primary wide" id="ready-button">I'm ready</button>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h2>Room settings</h2>
+            <span class="label host-only">host</span>
+          </div>
+          <div class="create-row vertical">
+            <label>Mode
+              <select id="room-mode">
+                <option value="coop">Co-op</option>
+                <option value="classic">Classic</option>
+                <option value="duel">Duel</option>
+                <option value="pve">Score Attack</option>
+              </select>
+            </label>
+            <label>Default stage
+              <select id="room-stage"></select>
+            </label>
+          </div>
+          <button class="btn primary wide host-only" id="start-button">Launch game lobby</button>
+          <p class="hint">The original in-game lobby handles ready, mode voting, map picking and the match.</p>
+          <p class="room-tip" id="room-tip">Waiting for the host.</p>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" hidden></div>
+  <script src="/chef-config.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
